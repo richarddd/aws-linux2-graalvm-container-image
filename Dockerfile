@@ -6,7 +6,7 @@ RUN yum -y update \
     && yum install -y glibc-static libcxx libcxx-devel llvm-toolset-7 zlib-static \
     && rm -rf /var/cache/yum
 
-ARG GRAAL_VERSION
+ENV GRAAL_VERSION 19.1.0
 ENV GRAAL_FOLDERNAME graalvm-ce-linux-amd64-${GRAAL_VERSION}
 ENV GRAAL_FILENAME ${GRAAL_FOLDERNAME}.tar.gz
 
